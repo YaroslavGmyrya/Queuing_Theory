@@ -69,7 +69,7 @@ move_matrix(15,15) = 0.1;
 %output result
 fprintf("stochastic = %d\n", stochastic(move_matrix));
 
-fprintf("stochastic = %d\n", ergodic(move_matrix, 10 ^ -5));
+fprintf("ergodic = %d\n", ergodic(move_matrix, 10 ^ -5));
 
 %define functions
 function is_stochastic = stochastic(matrix)
