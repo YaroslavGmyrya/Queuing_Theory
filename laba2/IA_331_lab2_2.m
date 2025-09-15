@@ -70,19 +70,20 @@ end
 
 
 %sub function
-function rand_num = generate_rand_num(X, x)
+function [rand_num, theory_mean] = generate_rand_num(X, x)
     rand_num = 0;
+    theory_mean = 0;
 
     %generate z
     z = rand();
-    
+    s = z;
     %find interval
     for i = 1 : length(X)
+        s = s - X(i);
 
-        z = z - X(i);
-
-        if z < 0
+        if s < 0
             rand_num = x(i);
+            theory_mean = theory_mean + z * rand_num;
             break;
         end
     end

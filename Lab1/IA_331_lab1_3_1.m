@@ -71,6 +71,10 @@ fprintf("stochastic = %d\n", stochastic(move_matrix));
 
 fprintf("ergodic = %d\n", ergodic(move_matrix, 10 ^ -5));
 
+mc = dtmc(move_matrix);
+h = graphplot(mc, 'ColorEdges', true);  
+
+
 %define functions
 function is_stochastic = stochastic(matrix)
     is_stochastic = true;
