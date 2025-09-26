@@ -23,6 +23,17 @@ for k = 1: length(N)
     mean_local = mean(selection);
     disp_local = var(selection);
 
+    sko = std(selection);
+
+    figure; 
+    yline(mean_local, 'Color', 'b'); 
+    hold on;
+    yline(mean_local + sko, 'Color','r');
+    yline(mean_local - sko, 'Color','r');
+    hold off;
+    title('Гистограмма данных');                     
+    grid on; 
+
     %output result
     fprintf("N = %d mean = %f \t theory mean = %f \t disp = %f\n", N(k), mean_local, theory_mean, disp_local);
 

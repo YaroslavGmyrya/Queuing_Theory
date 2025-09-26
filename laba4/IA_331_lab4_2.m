@@ -25,7 +25,7 @@ L_sist = L_och + k_zan;
 
 T_sist = L_sist / lambda;
 
-%output data
+%output result
 disp(['rho = ', num2str(rho)]);
 disp(['P_otk = ', num2str(P_otk)]);
 disp(['Q = ', num2str(Q)]);
@@ -35,3 +35,5 @@ disp(['L_och = ', num2str(L_och)]);
 disp(['T_och = ', num2str(T_och)]);
 disp(['L_sist = ', num2str(L_sist)]);
 disp(['T_sist = ', num2str(T_sist)]);
+
+
