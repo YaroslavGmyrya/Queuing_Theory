@@ -18,7 +18,8 @@ d = 0.11;
 N = 250;
 
 chi_seq = chi2rnd(d, N, 1);
-exp_seq = exprnd(E, N, 1);
+exp_seq1 = exprnd(E, N, 1);
+exp_seq2 = exprnd(E, N, 1);
 
 chi_E = sum(chi_seq)/N;
 chi_D = sum(chi_seq .^ 2)/N - chi_E^2;
