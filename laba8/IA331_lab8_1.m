@@ -43,7 +43,7 @@ subplot(4, 1, 1);
 plot(p_v, N_q);
 xlabel("p");
 ylabel("N_q");
-title("Среднее число заявок в СМО M/G/1");
+title("Средняя длина очереди в СМО M/G/1");
 subplot(4, 1, 2);
 plot(p_v, N);
 xlabel("p");
@@ -52,12 +52,12 @@ title("Среднее число заявок в СМО M/G/1");
 subplot(4, 1, 3);
 plot(p_v, W);
 xlabel("p");
-ylabel("N");
+ylabel("W");
 title("Среднее время ожидания для M/G/1");
 subplot(4, 1, 4);
 plot(p_v, T);
 xlabel("p");
-ylabel("N");
+ylabel("T");
 title("Среднее время пребывания требования в системе для M/G/1");
 
 %clean vectors
@@ -68,7 +68,7 @@ T = zeros(p_count, 1);
 
 
 for i = 1: length(var)
-    stats =  MG1_param(MG1_tn, var(i), p);
+    stats =  MG1_param(MG1_tn, var(i), lambda/u);
     N_q(i) = stats.N_q;
     N(i) = stats.N;
     W(i) = stats.W;
@@ -89,12 +89,12 @@ title("Среднее число заявок в СМО M/G/1");
 subplot(4, 1, 3);
 plot(var, W);
 xlabel("c");
-ylabel("N");
+ylabel("W");
 title("Среднее время ожидания в СМО M/G/1");
 subplot(4, 1, 4);
 plot(var, T);
 xlabel("c");
-ylabel("N");
+ylabel("T");
 title("Среднее время пребывания требования в СМО M/G/1");
 
 %clean vectors
@@ -127,7 +127,7 @@ title("Среднее число заявок в СМО M/D/1");
 subplot(4, 1, 3);
 plot(p_v, W);
 xlabel("p");
-ylabel("N");
+ylabel("W");
 title("Среднее время ожидания в СМО M/D/1");
 subplot(4, 1, 4);
 plot(p_v, T);
@@ -163,7 +163,7 @@ title("Среднее число заявок в СМО M/M/1");
 subplot(4, 1, 3);
 plot(p_v, W);
 xlabel("p");
-ylabel("N");
+ylabel("W");
 title("Среднее время ожидания в СМО M/M/1");
 subplot(4, 1, 4);
 plot(p_v, T);
